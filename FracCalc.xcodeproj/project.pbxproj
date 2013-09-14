@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43D5319117E42A93001F51DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D5319017E42A93001F51DC /* UIKit.framework */; };
+		43D5319317E42A93001F51DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D5319217E42A93001F51DC /* Foundation.framework */; };
+		43D5319517E42A93001F51DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D5319417E42A93001F51DC /* CoreGraphics.framework */; };
+		43D5319B17E42A93001F51DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43D5319917E42A93001F51DC /* InfoPlist.strings */; };
+		43D5319D17E42A93001F51DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D5319C17E42A93001F51DC /* main.m */; };
+		43D531A117E42A93001F51DC /* COINSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D531A017E42A93001F51DC /* COINSAppDelegate.m */; };
+		43D531A317E42A93001F51DC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 43D531A217E42A93001F51DC /* Default.png */; };
+		43D531A517E42A93001F51DC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43D531A417E42A93001F51DC /* Default@2x.png */; };
+		43D531A717E42A93001F51DC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43D531A617E42A93001F51DC /* Default-568h@2x.png */; };
+		43D531AA17E42A93001F51DC /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D531A817E42A93001F51DC /* MainStoryboard_iPhone.storyboard */; };
+		43D531AD17E42A93001F51DC /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D531AB17E42A93001F51DC /* MainStoryboard_iPad.storyboard */; };
+		43D531B017E42A93001F51DC /* COINSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D531AF17E42A93001F51DC /* COINSViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		43D5318D17E42A93001F51DC /* FracCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FracCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43D5319017E42A93001F51DC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		43D5319217E42A93001F51DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		43D5319417E42A93001F51DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		43D5319817E42A93001F51DC /* FracCalc-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FracCalc-Info.plist"; sourceTree = "<group>"; };
+		43D5319A17E42A93001F51DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		43D5319C17E42A93001F51DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		43D5319E17E42A93001F51DC /* FracCalc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FracCalc-Prefix.pch"; sourceTree = "<group>"; };
+		43D5319F17E42A93001F51DC /* COINSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COINSAppDelegate.h; sourceTree = "<group>"; };
+		43D531A017E42A93001F51DC /* COINSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COINSAppDelegate.m; sourceTree = "<group>"; };
+		43D531A217E42A93001F51DC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		43D531A417E42A93001F51DC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		43D531A617E42A93001F51DC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		43D531A917E42A93001F51DC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		43D531AC17E42A93001F51DC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		43D531AE17E42A93001F51DC /* COINSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COINSViewController.h; sourceTree = "<group>"; };
+		43D531AF17E42A93001F51DC /* COINSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COINSViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43D5318A17E42A93001F51DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D5319117E42A93001F51DC /* UIKit.framework in Frameworks */,
+				43D5319317E42A93001F51DC /* Foundation.framework in Frameworks */,
+				43D5319517E42A93001F51DC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43D5318417E42A93001F51DC = {
+			isa = PBXGroup;
+			children = (
+				43D5319617E42A93001F51DC /* FracCalc */,
+				43D5318F17E42A93001F51DC /* Frameworks */,
+				43D5318E17E42A93001F51DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		43D5318E17E42A93001F51DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43D5318D17E42A93001F51DC /* FracCalc.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43D5318F17E42A93001F51DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43D5319017E42A93001F51DC /* UIKit.framework */,
+				43D5319217E42A93001F51DC /* Foundation.framework */,
+				43D5319417E42A93001F51DC /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		43D5319617E42A93001F51DC /* FracCalc */ = {
+			isa = PBXGroup;
+			children = (
+				43D5319F17E42A93001F51DC /* COINSAppDelegate.h */,
+				43D531A017E42A93001F51DC /* COINSAppDelegate.m */,
+				43D531A817E42A93001F51DC /* MainStoryboard_iPhone.storyboard */,
+				43D531AB17E42A93001F51DC /* MainStoryboard_iPad.storyboard */,
+				43D531AE17E42A93001F51DC /* COINSViewController.h */,
+				43D531AF17E42A93001F51DC /* COINSViewController.m */,
+				43D5319717E42A93001F51DC /* Supporting Files */,
+			);
+			path = FracCalc;
+			sourceTree = "<group>";
+		};
+		43D5319717E42A93001F51DC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				43D5319817E42A93001F51DC /* FracCalc-Info.plist */,
+				43D5319917E42A93001F51DC /* InfoPlist.strings */,
+				43D5319C17E42A93001F51DC /* main.m */,
+				43D5319E17E42A93001F51DC /* FracCalc-Prefix.pch */,
+				43D531A217E42A93001F51DC /* Default.png */,
+				43D531A417E42A93001F51DC /* Default@2x.png */,
+				43D531A617E42A93001F51DC /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43D5318C17E42A93001F51DC /* FracCalc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43D531B317E42A93001F51DC /* Build configuration list for PBXNativeTarget "FracCalc" */;
+			buildPhases = (
+				43D5318917E42A93001F51DC /* Sources */,
+				43D5318A17E42A93001F51DC /* Frameworks */,
+				43D5318B17E42A93001F51DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FracCalc;
+			productName = FracCalc;
+			productReference = 43D5318D17E42A93001F51DC /* FracCalc.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43D5318517E42A93001F51DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = COINS;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "COINS Project AID";
+			};
+			buildConfigurationList = 43D5318817E42A93001F51DC /* Build configuration list for PBXProject "FracCalc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 43D5318417E42A93001F51DC;
+			productRefGroup = 43D5318E17E42A93001F51DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43D5318C17E42A93001F51DC /* FracCalc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43D5318B17E42A93001F51DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D5319B17E42A93001F51DC /* InfoPlist.strings in Resources */,
+				43D531A317E42A93001F51DC /* Default.png in Resources */,
+				43D531A517E42A93001F51DC /* Default@2x.png in Resources */,
+				43D531A717E42A93001F51DC /* Default-568h@2x.png in Resources */,
+				43D531AA17E42A93001F51DC /* MainStoryboard_iPhone.storyboard in Resources */,
+				43D531AD17E42A93001F51DC /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43D5318917E42A93001F51DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D5319D17E42A93001F51DC /* main.m in Sources */,
+				43D531A117E42A93001F51DC /* COINSAppDelegate.m in Sources */,
+				43D531B017E42A93001F51DC /* COINSViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		43D5319917E42A93001F51DC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43D5319A17E42A93001F51DC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		43D531A817E42A93001F51DC /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43D531A917E42A93001F51DC /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		43D531AB17E42A93001F51DC /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43D531AC17E42A93001F51DC /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		43D531B117E42A93001F51DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		43D531B217E42A93001F51DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		43D531B417E42A93001F51DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FracCalc/FracCalc-Prefix.pch";
+				INFOPLIST_FILE = "FracCalc/FracCalc-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		43D531B517E42A93001F51DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FracCalc/FracCalc-Prefix.pch";
+				INFOPLIST_FILE = "FracCalc/FracCalc-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43D5318817E42A93001F51DC /* Build configuration list for PBXProject "FracCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43D531B117E42A93001F51DC /* Debug */,
+				43D531B217E42A93001F51DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43D531B317E42A93001F51DC /* Build configuration list for PBXNativeTarget "FracCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43D531B417E42A93001F51DC /* Debug */,
+				43D531B517E42A93001F51DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43D5318517E42A93001F51DC /* Project object */;
+}
