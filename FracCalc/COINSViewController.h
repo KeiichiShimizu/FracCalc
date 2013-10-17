@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "COINSKeyboard.h"
+#import "COINSFraction.h"
 
-@interface COINSViewController : UIViewController
-
+@interface COINSViewController : UIViewController <COINSKeyboardDelegate>
+{
+    NSInteger fracFlag;
+    NSMutableString *tmpString;
+    UILabel *upperlabel;
+    UILabel *answerlabel;
+    NSMutableString *upper;
+    NSMutableString *answer;
+    NSInteger i;
+    COINSFraction *left;
+    COINSFraction *right;
+}
 @end

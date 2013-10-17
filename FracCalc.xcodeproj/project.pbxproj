@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43B9112A17E603590030A3CE /* COINSKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B9112917E603590030A3CE /* COINSKeyboard.m */; };
+		43B9113017E6A9C80030A3CE /* COINSMixedFraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B9112F17E6A9C80030A3CE /* COINSMixedFraction.m */; };
 		43D5319117E42A93001F51DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D5319017E42A93001F51DC /* UIKit.framework */; };
 		43D5319317E42A93001F51DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D5319217E42A93001F51DC /* Foundation.framework */; };
 		43D5319517E42A93001F51DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D5319417E42A93001F51DC /* CoreGraphics.framework */; };
@@ -19,9 +21,19 @@
 		43D531AA17E42A93001F51DC /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D531A817E42A93001F51DC /* MainStoryboard_iPhone.storyboard */; };
 		43D531AD17E42A93001F51DC /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D531AB17E42A93001F51DC /* MainStoryboard_iPad.storyboard */; };
 		43D531B017E42A93001F51DC /* COINSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D531AF17E42A93001F51DC /* COINSViewController.m */; };
+		43D531B817E42B95001F51DC /* COINSFraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D531B717E42B95001F51DC /* COINSFraction.m */; };
+		82CB385A17FA8BCD00BA07B1 /* COINSFracState.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CB385917FA8BCD00BA07B1 /* COINSFracState.m */; };
+		82CB386017FBB3E900BA07B1 /* COINSFracContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CB385F17FBB3E900BA07B1 /* COINSFracContext.m */; };
+		82CB386317FBB74B00BA07B1 /* COINSNumeState.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CB386217FBB74B00BA07B1 /* COINSNumeState.m */; };
+		82CB386617FBB79200BA07B1 /* COINSDenoState.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CB386517FBB79200BA07B1 /* COINSDenoState.m */; };
+		82CB386917FBB7AB00BA07B1 /* COINSPostCalcState.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CB386817FBB7AB00BA07B1 /* COINSPostCalcState.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43B9112817E603590030A3CE /* COINSKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COINSKeyboard.h; sourceTree = "<group>"; };
+		43B9112917E603590030A3CE /* COINSKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COINSKeyboard.m; sourceTree = "<group>"; };
+		43B9112E17E6A9C80030A3CE /* COINSMixedFraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COINSMixedFraction.h; sourceTree = "<group>"; };
+		43B9112F17E6A9C80030A3CE /* COINSMixedFraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COINSMixedFraction.m; sourceTree = "<group>"; };
 		43D5318D17E42A93001F51DC /* FracCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FracCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D5319017E42A93001F51DC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		43D5319217E42A93001F51DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -39,6 +51,18 @@
 		43D531AC17E42A93001F51DC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		43D531AE17E42A93001F51DC /* COINSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COINSViewController.h; sourceTree = "<group>"; };
 		43D531AF17E42A93001F51DC /* COINSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COINSViewController.m; sourceTree = "<group>"; };
+		43D531B617E42B95001F51DC /* COINSFraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COINSFraction.h; sourceTree = "<group>"; };
+		43D531B717E42B95001F51DC /* COINSFraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COINSFraction.m; sourceTree = "<group>"; };
+		82CB385817FA8BCD00BA07B1 /* COINSFracState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COINSFracState.h; sourceTree = "<group>"; };
+		82CB385917FA8BCD00BA07B1 /* COINSFracState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COINSFracState.m; sourceTree = "<group>"; };
+		82CB385E17FBB3E900BA07B1 /* COINSFracContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COINSFracContext.h; sourceTree = "<group>"; };
+		82CB385F17FBB3E900BA07B1 /* COINSFracContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COINSFracContext.m; sourceTree = "<group>"; };
+		82CB386117FBB74B00BA07B1 /* COINSNumeState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COINSNumeState.h; sourceTree = "<group>"; };
+		82CB386217FBB74B00BA07B1 /* COINSNumeState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COINSNumeState.m; sourceTree = "<group>"; };
+		82CB386417FBB79200BA07B1 /* COINSDenoState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COINSDenoState.h; sourceTree = "<group>"; };
+		82CB386517FBB79200BA07B1 /* COINSDenoState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COINSDenoState.m; sourceTree = "<group>"; };
+		82CB386717FBB7AB00BA07B1 /* COINSPostCalcState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COINSPostCalcState.h; sourceTree = "<group>"; };
+		82CB386817FBB7AB00BA07B1 /* COINSPostCalcState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COINSPostCalcState.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +79,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43B9112B17E6036D0030A3CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				43D5319F17E42A93001F51DC /* COINSAppDelegate.h */,
+				43D531A017E42A93001F51DC /* COINSAppDelegate.m */,
+				43D531AE17E42A93001F51DC /* COINSViewController.h */,
+				43D531AF17E42A93001F51DC /* COINSViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		43B9112C17E603770030A3CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				43B9112817E603590030A3CE /* COINSKeyboard.h */,
+				43B9112917E603590030A3CE /* COINSKeyboard.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		43B9112D17E6037F0030A3CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43B9113117E6B0600030A3CE /* StateMachine */,
+				43D531B617E42B95001F51DC /* COINSFraction.h */,
+				43D531B717E42B95001F51DC /* COINSFraction.m */,
+				43B9112E17E6A9C80030A3CE /* COINSMixedFraction.h */,
+				43B9112F17E6A9C80030A3CE /* COINSMixedFraction.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		43B9113117E6B0600030A3CE /* StateMachine */ = {
+			isa = PBXGroup;
+			children = (
+				82CB385E17FBB3E900BA07B1 /* COINSFracContext.h */,
+				82CB385F17FBB3E900BA07B1 /* COINSFracContext.m */,
+				82CB385817FA8BCD00BA07B1 /* COINSFracState.h */,
+				82CB385917FA8BCD00BA07B1 /* COINSFracState.m */,
+				82CB386117FBB74B00BA07B1 /* COINSNumeState.h */,
+				82CB386217FBB74B00BA07B1 /* COINSNumeState.m */,
+				82CB386417FBB79200BA07B1 /* COINSDenoState.h */,
+				82CB386517FBB79200BA07B1 /* COINSDenoState.m */,
+				82CB386717FBB7AB00BA07B1 /* COINSPostCalcState.h */,
+				82CB386817FBB7AB00BA07B1 /* COINSPostCalcState.m */,
+			);
+			name = StateMachine;
+			sourceTree = "<group>";
+		};
 		43D5318417E42A93001F51DC = {
 			isa = PBXGroup;
 			children = (
@@ -85,12 +158,11 @@
 		43D5319617E42A93001F51DC /* FracCalc */ = {
 			isa = PBXGroup;
 			children = (
-				43D5319F17E42A93001F51DC /* COINSAppDelegate.h */,
-				43D531A017E42A93001F51DC /* COINSAppDelegate.m */,
+				43B9112D17E6037F0030A3CE /* Model */,
+				43B9112C17E603770030A3CE /* View */,
+				43B9112B17E6036D0030A3CE /* Controller */,
 				43D531A817E42A93001F51DC /* MainStoryboard_iPhone.storyboard */,
 				43D531AB17E42A93001F51DC /* MainStoryboard_iPad.storyboard */,
-				43D531AE17E42A93001F51DC /* COINSViewController.h */,
-				43D531AF17E42A93001F51DC /* COINSViewController.m */,
 				43D5319717E42A93001F51DC /* Supporting Files */,
 			);
 			path = FracCalc;
@@ -178,9 +250,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82CB385A17FA8BCD00BA07B1 /* COINSFracState.m in Sources */,
 				43D5319D17E42A93001F51DC /* main.m in Sources */,
+				82CB386917FBB7AB00BA07B1 /* COINSPostCalcState.m in Sources */,
+				82CB386017FBB3E900BA07B1 /* COINSFracContext.m in Sources */,
 				43D531A117E42A93001F51DC /* COINSAppDelegate.m in Sources */,
 				43D531B017E42A93001F51DC /* COINSViewController.m in Sources */,
+				82CB386317FBB74B00BA07B1 /* COINSNumeState.m in Sources */,
+				43D531B817E42B95001F51DC /* COINSFraction.m in Sources */,
+				43B9112A17E603590030A3CE /* COINSKeyboard.m in Sources */,
+				82CB386617FBB79200BA07B1 /* COINSDenoState.m in Sources */,
+				43B9113017E6A9C80030A3CE /* COINSMixedFraction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +358,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FracCalc/FracCalc-Prefix.pch";
 				INFOPLIST_FILE = "FracCalc/FracCalc-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -289,6 +370,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FracCalc/FracCalc-Prefix.pch";
 				INFOPLIST_FILE = "FracCalc/FracCalc-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -313,6 +395,7 @@
 				43D531B517E42A93001F51DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
