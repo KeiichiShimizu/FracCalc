@@ -27,8 +27,16 @@
     }else if (c == '+' | c == '-' | c == '*' | c == '/'){
         COINSDenoState *next = [COINSDenoState alloc];
         NSInteger real = [value integerValue];
-        context.left = [context.left initWith:1 numerator:real denominator:1];
+        context.left = [context.left initWith:context.sign numerator:real denominator:1];
         return [next init];
+        
+    }else if (c == 's'){
+        if (context.sign == -1) {
+            context.sign = 1;
+        }else{
+            context.sign = -1;
+        }
+        return self;
     }else{
         return self;
     }

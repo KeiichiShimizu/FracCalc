@@ -33,12 +33,14 @@
 -(id)handle:(COINSFracContext *)context inchar:(char)c
 {
     if (c == 'a') {
+        
         context.tmpString = [@"" mutableCopy];
         context.upperlabel.text = [@"" mutableCopy];
         COINSDenoState *next = [COINSDenoState alloc];
         return [next initWith];
 
     }else if (c == 'c'){
+        
         [context.tmpString deleteCharactersInRange:NSMakeRange(self.numeCounter,1)];
         NSMutableString *tmp = [context.upperlabel.text mutableCopy];
         [tmp deleteCharactersInRange:NSMakeRange(self.numeCounter,1)];
@@ -46,29 +48,35 @@
         context.counter--;
         return self;
         
+    }else if (c == 's'){
+        
+        if (context.sign == -1) {
+            context.sign = 1;
+        }else{
+            context.sign = -1;
+        }
+        return self;
+        
     }else if (c == '+' | c == '-' | c == '*' | c == '/'){
+        
         NSInteger num = [self.value integerValue];
         if (context.left == NULL) {
             [context.tmpString appendFormat:@"%c",c];
             context.opr = c;
-            if (context.sign == -1) {
-                context.left = [context.left initWith:-1 numerator:num denominator:self.deno];
-                context.sign = 1;
-            }else{
-                context.left = [context.left initWith:1 numerator:num denominator:self.deno];
-            }
-            COINSDenoState *next = [COINSDenoState alloc];
+            context.left = [context.left initWith:context.sign numerator:num denominator:self.deno];
+            context.sign = 1;
             NSInteger real = [value integerValue];
-            context.left = [context.left initWith:1 numerator:real denominator:1];
+            context.left = [context.left initWith:context.sign numerator:real denominator:1];
+            COINSDenoState *next = [COINSDenoState alloc];
             return [next initWith];
             
         }else{
+            
             COINSFraction *right;
-            if (context.sign == -1) {
-                right = [right initWith:-1 numerator:num denominator:self.deno];
-            }else{
-                right = [right initWith:1 numerator:num denominator:self.deno];
-            }
+
+            right = [right initWith:context.sign numerator:num denominator:self.deno];
+            context.sign = 1;
+            
             if (context.opr =='+') {
                 context.left = [context.left add:right];
             }else if (context.opr == '-'){
