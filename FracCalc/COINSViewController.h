@@ -9,13 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "COINSKeyboard.h"
 #import "COINSFraction.h"
+#import "COINSFracContext.h"
 
 @interface COINSViewController : UIViewController <COINSKeyboardDelegate>
 {
-    NSInteger fracFlag;
+    COINSFracContext *context;
+    //NSInteger fracFlag;
     NSMutableString *tmpString;
-    UILabel *upperlabel;
-    UILabel *answerlabel;
     NSMutableString *upper;
     NSMutableString *answer;
     NSInteger i;

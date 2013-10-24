@@ -26,6 +26,9 @@
     [super viewDidLoad];
 	
 	inputString = [NSMutableString string];
+    
+    context = [[COINSFracContext alloc] initWith];
+
 
 	appSize = CGSizeMake([UIScreen mainScreen].applicationFrame.size.width,
 						 [UIScreen mainScreen].applicationFrame.size.height);
@@ -53,35 +56,35 @@
 	[self.view addSubview:keyboard];
 	
     //create label
-    upperlabel = [[UILabel alloc] init];
+    context.upperlabel = [[UILabel alloc] init];
     
-    upperlabel.frame = CGRectMake(30, 20, 550, 200);
+    context.upperlabel.frame = CGRectMake(30, 20, 550, 200);
     
-    upperlabel.backgroundColor = [UIColor lightGrayColor];
+    context.upperlabel.backgroundColor = [UIColor lightGrayColor];
     
     upper = [NSMutableString string];
     
     [upper appendFormat:@" "];
     
-    upperlabel.text = upper;
+    context.upperlabel.text = upper;
     
-    [self.view addSubview:upperlabel];
+    [self.view addSubview:context.upperlabel];
     
     
     //create label
-    answerlabel = [[UILabel alloc] init];
+    context.answerlabel = [[UILabel alloc] init];
     
-    answerlabel.frame = CGRectMake(30, 230, 550, 400);
+    context.answerlabel.frame = CGRectMake(30, 230, 550, 400);
     
-    answerlabel.backgroundColor = [UIColor lightGrayColor];
+    context.answerlabel.backgroundColor = [UIColor lightGrayColor];
     
     answer = [NSMutableString string];
     
     [answer appendFormat:@" "];
     
-    answerlabel.text = answer;
+    context.answerlabel.text = answer;
     
-    [self.view addSubview:answerlabel];
+    [self.view addSubview:context.answerlabel];
 
     tmpString = [@"" mutableCopy];
     i = 0;
@@ -95,6 +98,8 @@
 {
 	[inputString appendFormat:@"%c", c];
 
+    context.currentState = [context.currentState handle:context inchar:c];
+    
     if (fracFlag == 1) {
         if (c == '/' | c == '*' | c == '+' | c == '-') {
             fracFlag = 0;
@@ -140,8 +145,9 @@
             NSLog(@"%@", tmpString);
         }
     }
+    
 //    [upper appendString:tmpString];
-    upperlabel.text = upper;
+    context.upperlabel.text = upper;
 
     NSLog(@"inputString: %@", inputString);
     

@@ -78,9 +78,7 @@
             return [next initWith];
         }
     }else{
-        
         return self;
-   
     }
     
 }

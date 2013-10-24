@@ -65,8 +65,6 @@
             context.opr = c;
             context.left = [context.left initWith:context.sign numerator:num denominator:self.deno];
             context.sign = 1;
-            NSInteger real = [value integerValue];
-            context.left = [context.left initWith:context.sign numerator:real denominator:1];
             COINSDenoState *next = [COINSDenoState alloc];
             return [next initWith];
             
@@ -104,11 +102,8 @@
         }else{
             NSInteger val = [self.value integerValue];
             COINSFraction *right = [COINSFraction alloc];
-            if (context.sign == -1) {
-                right = [right initWith:-1 numerator:val denominator:1];
-            }else{
-                right = [right initWith:1 numerator:val denominator:1];
-            }
+            right = [right initWith:context.sign numerator:val denominator:1];
+            context.sign = 1;
             if (context.opr =='+') {
                 context.left = [context.left add:right];
             }else if (context.opr == '-'){
@@ -118,6 +113,7 @@
             }else if (context.opr == '/'){
                 context.left = [context.left div:right];
             }
+            context.opr = NULL;
             context.answerlabel.text = [NSString stringWithFormat:@"%@", [context.left stringRepresentation]];
             COINSPostCalcState *next = [COINSPostCalcState alloc];
             return [next initWith];
