@@ -16,12 +16,23 @@
 
 @synthesize value;
 
+-(id)initWith{
+    self = [super init];
+	
+	if (self) {
+        NSLog(@"Post");
+		return self;
+	}else {
+        return nil;
+    }
+}
 
 -(id)handle:(COINSFracContext *)context inchar:(char)c
 {
     if (c == 'a') {
         context.tmpString = [@"" mutableCopy];
         context.upperlabel.text = [@"" mutableCopy];
+        context.answerlabel.text = [@"" mutableCopy];
         COINSDenoState *next = [COINSDenoState alloc];
         return [next init];
     }else if (c == '+' | c == '-' | c == '*' | c == '/'){

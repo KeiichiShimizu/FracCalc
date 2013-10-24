@@ -17,7 +17,16 @@
 
 @synthesize value;
 
-
+-(id)initWith{
+    self = [super init];
+	
+	if (self) {
+        NSLog(@"Deno");
+		return self;
+	}else {
+        return nil;
+    }
+}
 
 -(id)handle:(COINSFracContext *)context inchar:(char)c
 {
@@ -25,6 +34,7 @@
         
         context.tmpString = [@"" mutableCopy];
         context.upperlabel.text = [@"" mutableCopy];
+        context.answerlabel.text = [@"" mutableCopy];
         COINSDenoState *next = [COINSDenoState alloc];
         return [next initWith];
         
@@ -56,7 +66,7 @@
     }else if (c == '+' | c == '-' | c == '*' | c == '/'){
         
         //see input as real number
-        context.opr = c;
+        context.opr = [NSString stringWithFormat:@"%c", c];
         COINSDenoState *next = [COINSDenoState alloc];
         NSInteger real = [value integerValue];
         context.left = [context.left initWith:context.sign numerator:real denominator:1];

@@ -10,11 +10,73 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FracCalc/COINSNumeState.m"
-            timestampString = "404206459.886552"
+            timestampString = "404291568.233469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "-handle:inchar:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FracCalc/COINSFracContext.h"
+            timestampString = "404290387.597377"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "opr"
+            landmarkType = "19">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[COINSFracContext opr]"
+                  moduleName = "FracCalc"
+                  urlString = "file://localhost/Users/Keiichi/Dropbox/COINS%20Project%20AID/yusukeIwama/FracCalc/FracCalc/COINSFracContext.h"
+                  timestampString = "404290832.200105"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "30">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[COINSFracContext setOpr:]"
+                  moduleName = "FracCalc"
+                  urlString = "file://localhost/Users/Keiichi/Dropbox/COINS%20Project%20AID/yusukeIwama/FracCalc/FracCalc/COINSFracContext.h"
+                  timestampString = "404290832.201332"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FracCalc/COINSNumeState.m"
+            timestampString = "404291568.233469"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "-handle:inchar:"
             landmarkType = "5">
          </BreakpointContent>

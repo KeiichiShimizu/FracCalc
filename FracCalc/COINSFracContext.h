@@ -20,7 +20,7 @@
 
 @property COINSFracState *currentState;
 @property COINSFraction *left;
-@property char opr;
+@property NSString *opr;
 @property NSInteger sign;
 @property NSMutableString *tmpString;
 @property UILabel *upperlabel;

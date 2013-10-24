@@ -23,6 +23,7 @@
 	if (self) {
         self.deno = denomi;
         self.numeCounter = 0;
+        NSLog(@"Nume");
 		return self;
 	}else {
         return nil;
@@ -36,6 +37,7 @@
         
         context.tmpString = [@"" mutableCopy];
         context.upperlabel.text = [@"" mutableCopy];
+        context.answerlabel.text = [@"" mutableCopy];
         COINSDenoState *next = [COINSDenoState alloc];
         return [next initWith];
 
@@ -62,7 +64,7 @@
         NSInteger num = [self.value integerValue];
         if (context.left == NULL) {
             [context.tmpString appendFormat:@"%c",c];
-            context.opr = c;
+            context.opr = [NSString stringWithFormat:@"%c", c];
             context.left = [context.left initWith:context.sign numerator:num denominator:self.deno];
             context.sign = 1;
             COINSDenoState *next = [COINSDenoState alloc];
@@ -75,16 +77,16 @@
             right = [right initWith:context.sign numerator:num denominator:self.deno];
             context.sign = 1;
             
-            if (context.opr =='+') {
+            if ([context.opr  isEqual: @"+"]) {
                 context.left = [context.left add:right];
-            }else if (context.opr == '-'){
+            }else if ([context.opr  isEqual: @"-"]){
                 context.left = [context.left sub:right];
-            }else if (context.opr == '*'){
+            }else if ([context.opr  isEqual: @"*"]){
                 context.left = [context.left mul:right];
-            }else if (context.opr == '/'){
+            }else if ([context.opr  isEqual: @"/"]){
                 context.left = [context.left div:right];
             }
-            context.opr = c;
+            context.opr = [NSString stringWithFormat:@"%c",c];
             COINSDenoState *next = [COINSDenoState alloc];
             next = [next initWith];
             return next;
@@ -104,16 +106,16 @@
             COINSFraction *right = [COINSFraction alloc];
             right = [right initWith:context.sign numerator:val denominator:1];
             context.sign = 1;
-            if (context.opr =='+') {
+            if ([context.opr  isEqual: @"+"]) {
                 context.left = [context.left add:right];
-            }else if (context.opr == '-'){
+            }else if ([context.opr  isEqual: @"-"]){
                 context.left = [context.left sub:right];
-            }else if (context.opr == '*'){
+            }else if ([context.opr  isEqual: @"*"]){
                 context.left = [context.left mul:right];
-            }else if (context.opr == '/'){
+            }else if ([context.opr  isEqual: @"/"]){
                 context.left = [context.left div:right];
             }
-            context.opr = NULL;
+            context.opr = [NSString stringWithFormat:@""];
             context.answerlabel.text = [NSString stringWithFormat:@"%@", [context.left stringRepresentation]];
             COINSPostCalcState *next = [COINSPostCalcState alloc];
             return [next initWith];
