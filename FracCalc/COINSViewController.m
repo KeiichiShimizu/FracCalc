@@ -99,7 +99,7 @@
 	[inputString appendFormat:@"%c", c];
 
     context.currentState = [context.currentState handle:context inchar:c];
-    
+   /*
     if (fracFlag == 1) {
         if (c == '/' | c == '*' | c == '+' | c == '-') {
             fracFlag = 0;
@@ -145,7 +145,7 @@
             NSLog(@"%@", tmpString);
         }
     }
-    
+    */
 //    [upper appendString:tmpString];
     context.upperlabel.text = upper;
 
