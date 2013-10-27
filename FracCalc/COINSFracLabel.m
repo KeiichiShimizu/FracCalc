@@ -9,6 +9,9 @@
 #import "COINSFracLabel.h"
 
 @implementation COINSFracLabel
+@synthesize first;
+@synthesize second;
+@synthesize third;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -19,9 +22,30 @@
     return self;
 }
 
+-(id)initWith
+{
+    self = [super init];
+    if(self){
+        
+    }
+}
+
 -(id)update:(char)c{
     
 }
+
+-(void)cleateFrac:(UILabel *)alabel{
+    
+}
+
+-(void)addHead:(UILabel *)alabel{
+    
+}
+
+-(void)addTail:(UILabel *)alabel{
+    
+}
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

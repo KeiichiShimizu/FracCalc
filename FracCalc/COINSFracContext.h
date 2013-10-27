@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "COINSFraction.h"
 #import "COINSFracState.h"
+#import "COINSFracLabel.h"
 #import "COINSDenoState.h"
 #import "COINSNumeState.h"
 #import "COINSPostCalcState.h"
@@ -23,8 +24,8 @@
 @property NSString *opr;
 @property NSInteger sign;
 @property NSMutableString *tmpString;
-@property UILabel *upperlabel;
-@property UILabel *answerlabel;
+@property COINSFracLabel *upperlabel;
+@property COINSFracLabel *answerlabel;
 @property NSInteger counter;
 @property BOOL isNull;
 

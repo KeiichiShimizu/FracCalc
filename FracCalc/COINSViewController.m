@@ -8,6 +8,7 @@
 
 #import "COINSViewController.h"
 #import "COINSFraction.h"
+#import "COINSFracLabel.h"
 #import <UIKit/UIKit.h>
 
 
@@ -54,25 +55,39 @@
 	NSArray *mergeInfo = @[@[@19, @23], @[@21, @22]];
 	[keyboard mergeButtons:mergeInfo];
 	[self.view addSubview:keyboard];
-	
+    
+    //create upperlabel
+    //first has left operand
+    context.upperlabel.first = [[COINSFracLabel alloc]init];
+    context.upperlabel.first.frame = CGRectMake(30, 20, 200, 75);
+    
+    
+    //second has operator
+    
+    
+    COINSFracLabel *operator = [[COINSFracLabel alloc]init];
+    operator.frame = CGRectMake(230, 25, 50, 50);
+    operator.backgroundColor = [UIColor lightGrayColor];
+	[self.view addSubview:operator];
+    
     //create label
-    context.upperlabel = [[UILabel alloc] init];
+    context.leftlabel = [[COINSFracLabel alloc] init];
     
-    context.upperlabel.frame = CGRectMake(30, 20, 550, 200);
+    context.leftlabel.frame = CGRectMake(30, 20, 200, 75);
     
-    context.upperlabel.backgroundColor = [UIColor lightGrayColor];
+    context.leftlabel.backgroundColor = [UIColor lightGrayColor];
     
     upper = [NSMutableString string];
     
     [upper appendFormat:@" "];
     
-    context.upperlabel.text = upper;
+    context.leftlabel.text = upper;
     
-    [self.view addSubview:context.upperlabel];
+    [self.view addSubview:context.leftlabel];
     
     
     //create label
-    context.answerlabel = [[UILabel alloc] init];
+    context.answerlabel = [[COINSFracLabel alloc] init];
     
     context.answerlabel.frame = CGRectMake(30, 230, 550, 400);
     

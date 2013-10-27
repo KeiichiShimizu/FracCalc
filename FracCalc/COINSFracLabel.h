@@ -10,7 +10,9 @@
 
 @interface COINSFracLabel : UILabel
 
-@property UILabel *leftLabel;
+@property COINSFracLabel *first;
+@property COINSFracLabel *second;
+@property COINSFracLabel *third;
 
 -(id)update:(char) c;
 

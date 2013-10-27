@@ -31,7 +31,7 @@
 {
     if (c == 'a') {
         context.tmpString = [@"" mutableCopy];
-        context.upperlabel.text = [@"" mutableCopy];
+        context.label.text = [@"" mutableCopy];
         context.answerlabel.text = [@"" mutableCopy];
         COINSDenoState *next = [COINSDenoState alloc];
         return [next init];
