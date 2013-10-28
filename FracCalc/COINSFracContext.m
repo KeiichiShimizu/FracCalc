@@ -32,7 +32,7 @@
         COINSDenoState *state = [COINSDenoState alloc];
         currentState = [state initWith];
         left = [COINSFraction alloc];
-        isNull = 1;
+        isNull = true;
         counter = 0;
         sign = 1;
 		return self;
