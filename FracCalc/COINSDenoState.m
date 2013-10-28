@@ -33,8 +33,8 @@
     if (c == 'a') {
         
         context.tmpString = [@"" mutableCopy];
-        context.upperlabel.text = [@"" mutableCopy];
-        context.answerlabel.text = [@"" mutableCopy];
+        context.upperlabel = [[COINSFracLabel alloc] init];
+        context.answerlabel = [[COINSFracLabel alloc] init];
         COINSDenoState *next = [COINSDenoState alloc];
         return [next initWith];
         
@@ -42,7 +42,20 @@
         
         context.isNull = 1;
         NSInteger denomi = [self.value integerValue];
-        context.tmpString = [@"" mutableCopy];
+
+        
+        //context.upperlabel.first.first seen as line of fraction
+        context.upperlabel.first.first.frame = CGRectMake(30, 190, 175, 5);
+        context.upperlabel.first.first.backgroundColor = [UIColor blackColor];
+        context.upperlabel.first.first.text = @"";
+        
+        //set second and third
+        context.upperlabel.first.second.frame = CGRectMake(30, 205, 175, 125);
+        context.upperlabel.first.third.frame = CGRectMake(30, 50, 175, 125);
+        context.upperlabel.first.second.backgroundColor = [UIColor lightGrayColor];
+        context.upperlabel.first.third.backgroundColor = [UIColor lightGrayColor];
+
+        context.upperlabel.first.second.text = [[NSString stringWithFormat:@"%d", denomi]mutableCopy];
         COINSNumeState *next = [COINSNumeState alloc];
         return [next initWith:denomi];
         

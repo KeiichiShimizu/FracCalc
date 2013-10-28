@@ -63,7 +63,19 @@
     context.upperlabel.first = [[COINSFracLabel alloc] init];
     context.upperlabel.first.frame = CGRectMake(30, 50, 175, 300);
     context.upperlabel.first.backgroundColor = [UIColor redColor];
-	[self.view addSubview:context.upperlabel.first];
+    
+    //context.upperlabel.first.first is int value or line of fraction
+    context.upperlabel.first.first = [[COINSFracLabel alloc] init];
+    context.upperlabel.first.first.frame = CGRectMake(30, 125, 175, 125);
+    context.upperlabel.first.first.backgroundColor = [UIColor lightGrayColor];
+	//[self.view addSubview:context.upperlabel.first];
+    [self.view addSubview:context.upperlabel.first.first];
+    
+    //init of denomi and nume label
+    context.upperlabel.first.second = [[COINSFracLabel alloc] init];
+    context.upperlabel.first.third = [[COINSFracLabel alloc] init];
+    [self.view addSubview:context.upperlabel.first.second];
+    [self.view addSubview:context.upperlabel.first.third];
     
     
     //second has operator

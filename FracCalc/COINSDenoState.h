@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "COINSFracState.h"
+#import "COINSFracLabel.h"
 #import "COINSFracContext.h"
 
 //this is state that is inputing denominator
