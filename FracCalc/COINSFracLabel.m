@@ -30,7 +30,13 @@
     }
 }
 
--(id)update:(char)c{
+-(id)update:(char) c{
+    if (c == '+' | c == '-' | c == '*' | c == '/') {
+        
+    }
+}
+
+-(void)setFraction{
     
 }
 

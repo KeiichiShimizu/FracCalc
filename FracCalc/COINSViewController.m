@@ -57,47 +57,46 @@
 	[self.view addSubview:keyboard];
     
     //create upperlabel
+    context.upperlabel = [[COINSFracLabel alloc] init];
+    
     //first has left operand
-    context.upperlabel.first = [[COINSFracLabel alloc]init];
-    context.upperlabel.first.frame = CGRectMake(30, 20, 200, 75);
+    context.upperlabel.first = [[COINSFracLabel alloc] init];
+    context.upperlabel.first.frame = CGRectMake(30, 50, 175, 300);
+    context.upperlabel.first.backgroundColor = [UIColor redColor];
+	[self.view addSubview:context.upperlabel.first];
     
     
     //second has operator
+    context.upperlabel.second = [[COINSFracLabel alloc] init];
+    context.upperlabel.second.frame = CGRectMake(215, 65, 125, 250);
+    context.upperlabel.second.backgroundColor = [UIColor blueColor];
+	[self.view addSubview:context.upperlabel.second];
+
     
+    //third has right operand
+    context.upperlabel.third = [[COINSFracLabel alloc] init];
+    context.upperlabel.third.frame = CGRectMake(350, 50, 175, 300);
+    context.upperlabel.third.backgroundColor = [UIColor redColor];
+    [self.view addSubview:context.upperlabel.third];
     
-    COINSFracLabel *operator = [[COINSFracLabel alloc]init];
-    operator.frame = CGRectMake(230, 25, 50, 50);
-    operator.backgroundColor = [UIColor lightGrayColor];
-	[self.view addSubview:operator];
-    
-    //create label
-    context.leftlabel = [[COINSFracLabel alloc] init];
-    
-    context.leftlabel.frame = CGRectMake(30, 20, 200, 75);
-    
-    context.leftlabel.backgroundColor = [UIColor lightGrayColor];
     
     upper = [NSMutableString string];
     
     [upper appendFormat:@" "];
     
-    context.leftlabel.text = upper;
-    
-    [self.view addSubview:context.leftlabel];
-    
     
     //create label
     context.answerlabel = [[COINSFracLabel alloc] init];
     
-    context.answerlabel.frame = CGRectMake(30, 230, 550, 400);
+    context.answerlabel.frame = CGRectMake(30, 400, 550, 300);
     
-    context.answerlabel.backgroundColor = [UIColor lightGrayColor];
+    context.answerlabel.backgroundColor = [UIColor blueColor];
     
     answer = [NSMutableString string];
     
     [answer appendFormat:@" "];
     
-    context.answerlabel.text = answer;
+    context.answerlabel.first.text = answer;
     
     [self.view addSubview:context.answerlabel];
 

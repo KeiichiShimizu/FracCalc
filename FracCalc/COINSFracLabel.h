@@ -7,12 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "COINSFraction.h"
+
 
 @interface COINSFracLabel : UILabel
 
 @property COINSFracLabel *first;
 @property COINSFracLabel *second;
 @property COINSFracLabel *third;
+@property COINSFraction *fraction;
+
 
 -(id)update:(char) c;
 
