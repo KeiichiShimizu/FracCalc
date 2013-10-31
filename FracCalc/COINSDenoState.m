@@ -74,7 +74,7 @@
             context.upperlabel.first.third.hidden = NO;
             
             //context.upperlabel.first.first seen as line of fraction
-            context.upperlabel.first.first.frame = CGRectMake(30, 190, 175, 5);
+            context.upperlabel.first.first.frame = CGRectMake(30, 290, 175, 5);
             context.upperlabel.first.first.backgroundColor = [UIColor blackColor];
             context.upperlabel.first.first.text = @"";
         

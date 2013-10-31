@@ -30,12 +30,12 @@
     
     //first has left operand
     //context.upperlabel.first.first is int value or line of fraction
-    self.upperlabel.first.first.frame = CGRectMake(30, 125, 175, 125);
+    self.upperlabel.first.first.frame = CGRectMake(30, 225, 175, 125);
     self.upperlabel.first.first.backgroundColor = [UIColor lightGrayColor];
     
     //init of denomi and nume label
-    self.upperlabel.first.second.frame = CGRectMake(30, 205, 175, 125);
-    self.upperlabel.first.third.frame = CGRectMake(30, 50, 175, 125);
+    self.upperlabel.first.second.frame = CGRectMake(30, 305, 175, 125);
+    self.upperlabel.first.third.frame = CGRectMake(30, 150, 175, 125);
     self.upperlabel.first.second.backgroundColor = [UIColor lightGrayColor];
     self.upperlabel.first.third.backgroundColor = [UIColor lightGrayColor];
     self.upperlabel.first.second.hidden = YES;
@@ -45,25 +45,25 @@
     
     //second has operator
     self.upperlabel.second = [[COINSFracLabel alloc] init];
-    self.upperlabel.second.frame = CGRectMake(215, 65, 125, 250);
+    self.upperlabel.second.frame = CGRectMake(215, 165, 125, 250);
     self.upperlabel.second.backgroundColor = [UIColor blueColor];
     
     
     //third has right operand
     self.upperlabel.third = [[COINSFracLabel alloc] init];
-    self.upperlabel.third.frame = CGRectMake(350, 50, 175, 300);
+    self.upperlabel.third.frame = CGRectMake(350, 150, 175, 300);
     self.upperlabel.third.backgroundColor = [UIColor redColor];
     //   [self.view addSubview:context.upperlabel.third];
     
     //context.upperlabel.third.first is int value or line of fraction
     self.upperlabel.third.first = [[COINSFracLabel alloc] init];
-    self.upperlabel.third.first.frame = CGRectMake(350, 125, 175, 125);
+    self.upperlabel.third.first.frame = CGRectMake(350, 225, 175, 125);
     self.upperlabel.third.first.backgroundColor = [UIColor lightGrayColor];
     
     
     //init of denomi and nume label
-    self.upperlabel.third.second.frame = CGRectMake(30, 205, 175, 125);
-    self.upperlabel.third.third.frame = CGRectMake(30, 50, 175, 125);
+    self.upperlabel.third.second.frame = CGRectMake(30, 305, 175, 125);
+    self.upperlabel.third.third.frame = CGRectMake(30, 150, 175, 125);
     self.upperlabel.third.second.backgroundColor = [UIColor lightGrayColor];
     self.upperlabel.third.third.backgroundColor = [UIColor lightGrayColor];
     self.upperlabel.third.second.hidden = YES;

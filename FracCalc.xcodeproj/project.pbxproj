@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		43B9112A17E603590030A3CE /* COINSKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B9112917E603590030A3CE /* COINSKeyboard.m */; };
 		43B9113017E6A9C80030A3CE /* COINSMixedFraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B9112F17E6A9C80030A3CE /* COINSMixedFraction.m */; };
 		43D5319117E42A93001F51DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D5319017E42A93001F51DC /* UIKit.framework */; };
 		43D5319317E42A93001F51DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D5319217E42A93001F51DC /* Foundation.framework */; };
@@ -28,11 +27,10 @@
 		82CB386617FBB79200BA07B1 /* COINSDenoState.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CB386517FBB79200BA07B1 /* COINSDenoState.m */; };
 		82CB386917FBB7AB00BA07B1 /* COINSPostCalcState.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CB386817FBB7AB00BA07B1 /* COINSPostCalcState.m */; };
 		82D0AEC4181A050F00946CB8 /* COINSFracLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D0AEC3181A050F00946CB8 /* COINSFracLabel.m */; };
+		82D9AAC318222901002D3158 /* COINSKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D9AAC218222901002D3158 /* COINSKeyboard.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		43B9112817E603590030A3CE /* COINSKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COINSKeyboard.h; sourceTree = "<group>"; };
-		43B9112917E603590030A3CE /* COINSKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COINSKeyboard.m; sourceTree = "<group>"; };
 		43B9112E17E6A9C80030A3CE /* COINSMixedFraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COINSMixedFraction.h; sourceTree = "<group>"; };
 		43B9112F17E6A9C80030A3CE /* COINSMixedFraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COINSMixedFraction.m; sourceTree = "<group>"; };
 		43D5318D17E42A93001F51DC /* FracCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FracCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +64,8 @@
 		82CB386817FBB7AB00BA07B1 /* COINSPostCalcState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COINSPostCalcState.m; sourceTree = "<group>"; };
 		82D0AEC2181A050F00946CB8 /* COINSFracLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COINSFracLabel.h; sourceTree = "<group>"; };
 		82D0AEC3181A050F00946CB8 /* COINSFracLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COINSFracLabel.m; sourceTree = "<group>"; };
+		82D9AAC118222901002D3158 /* COINSKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = COINSKeyboard.h; path = ../COINSKeyboard.h; sourceTree = "<group>"; };
+		82D9AAC218222901002D3158 /* COINSKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = COINSKeyboard.m; path = ../COINSKeyboard.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +96,8 @@
 		43B9112C17E603770030A3CE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				43B9112817E603590030A3CE /* COINSKeyboard.h */,
-				43B9112917E603590030A3CE /* COINSKeyboard.m */,
+				82D9AAC118222901002D3158 /* COINSKeyboard.h */,
+				82D9AAC218222901002D3158 /* COINSKeyboard.m */,
 				82D0AEC2181A050F00946CB8 /* COINSFracLabel.h */,
 				82D0AEC3181A050F00946CB8 /* COINSFracLabel.m */,
 			);
@@ -267,8 +267,8 @@
 				43D531A117E42A93001F51DC /* COINSAppDelegate.m in Sources */,
 				43D531B017E42A93001F51DC /* COINSViewController.m in Sources */,
 				82CB386317FBB74B00BA07B1 /* COINSNumeState.m in Sources */,
+				82D9AAC318222901002D3158 /* COINSKeyboard.m in Sources */,
 				43D531B817E42B95001F51DC /* COINSFraction.m in Sources */,
-				43B9112A17E603590030A3CE /* COINSKeyboard.m in Sources */,
 				82CB386617FBB79200BA07B1 /* COINSDenoState.m in Sources */,
 				43B9113017E6A9C80030A3CE /* COINSMixedFraction.m in Sources */,
 				82D0AEC4181A050F00946CB8 /* COINSFracLabel.m in Sources */,

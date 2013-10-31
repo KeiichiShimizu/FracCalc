@@ -44,17 +44,27 @@
 	
 	NSLog(@"%@ + %@ / %@ = %@", x.stringRepresentation, x.stringRepresentation, y.stringRepresentation, [x add:[x div:y]].stringRepresentation);
 	
-	NSArray *buttonTitles = @[@"AC", @"仮・帯",	@"(",	@")",
-						   @"C",	@"±",	@"÷",	@"×",
-						   @"7",	@"8",	@"9",	@"-",
-						   @"4",	@"5",	@"6",	@"+",
-						   @"1",	@"2",	@"3",	@"=",
+	NSArray *buttonTitles = @[@"AC",	@"C",	@"±",	@"÷",
+						   @"7",	@"8",	@"9",	@"×",
+						   @"4",	@"5",	@"6",	@"-",
+						   @"1",	@"2",	@"3",	@"+",
 						   @"0",	@"分の",	@"分の",	@"="];
-	NSString *outCharacters = @"am()cs/*789-456+123=0bb=";
-	COINSKeyboard *keyboard = [COINSKeyboard keyboardWithDelegate:self Frame:CGRectMake(600, 10, 400, 700) row:6 column:4 titles:buttonTitles outCharacters:outCharacters];
-	NSArray *mergeInfo = @[@[@19, @23], @[@21, @22]];
+	NSString *outCharacters = @"acs/789*456-123+0bb=";
+	COINSKeyboard *keyboard = [[COINSKeyboard alloc] initWithFrame:CGRectMake(600, 20, 400, 738)];
+    keyboard.delegate = self;
+    [keyboard updateButtonsWithRow:5 column:4 titles:buttonTitles outCharacters:outCharacters];
+	NSArray *mergeInfo = @[@[@17, @18]];
 	[keyboard mergeButtons:mergeInfo];
 	[self.view addSubview:keyboard];
+    
+    UILabel *titleLabel = [[UILabel alloc] init];
+    titleLabel.frame = CGRectMake(0, 20, 600, 78);
+    titleLabel.backgroundColor = [UIColor lightGrayColor];
+    titleLabel.text = @"Fraction Calculator";
+    titleLabel.adjustsFontSizeToFitWidth = YES;
+    titleLabel.font = [UIFont systemFontOfSize:30];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:titleLabel];
     
     //create upperlabel
     context.upperlabel = [[COINSFracLabel alloc] init];
@@ -69,7 +79,7 @@
     
     //context.upperlabel.first.first is int value or line of fraction
     context.upperlabel.first.first = [[COINSFracLabel alloc] init];
-    context.upperlabel.first.first.frame = CGRectMake(30, 125, 175, 125);
+    context.upperlabel.first.first.frame = CGRectMake(30, 225, 175, 125);
     context.upperlabel.first.first.backgroundColor = [UIColor lightGrayColor];
 	//[self.view addSubview:context.upperlabel.first];
     [self.view addSubview:context.upperlabel.first.first];
@@ -82,8 +92,8 @@
     [self.view addSubview:context.upperlabel.first.third];
     
     //set second and third
-    context.upperlabel.first.second.frame = CGRectMake(30, 205, 175, 125);
-    context.upperlabel.first.third.frame = CGRectMake(30, 50, 175, 125);
+    context.upperlabel.first.second.frame = CGRectMake(30, 305, 175, 125);
+    context.upperlabel.first.third.frame = CGRectMake(30, 150, 175, 125);
     context.upperlabel.first.second.backgroundColor = [UIColor lightGrayColor];
     context.upperlabel.first.third.backgroundColor = [UIColor lightGrayColor];
     context.upperlabel.first.second.hidden = YES;
@@ -93,7 +103,7 @@
     
     //second has operator
     context.upperlabel.second = [[COINSFracLabel alloc] init];
-    context.upperlabel.second.frame = CGRectMake(215, 65, 125, 250);
+    context.upperlabel.second.frame = CGRectMake(215, 165, 125, 250);
     context.upperlabel.second.backgroundColor = [UIColor blueColor];
 	[self.view addSubview:context.upperlabel.second];
     context.upperlabel.second.font = [UIFont systemFontOfSize:60];
@@ -108,7 +118,7 @@
  //   [self.view addSubview:context.upperlabel.third];
     //context.upperlabel.third.first is int value or line of fraction
     context.upperlabel.third.first = [[COINSFracLabel alloc] init];
-    context.upperlabel.third.first.frame = CGRectMake(350, 125, 175, 125);
+    context.upperlabel.third.first.frame = CGRectMake(350, 225, 175, 125);
     context.upperlabel.third.first.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:context.upperlabel.third.first];
     
@@ -118,8 +128,8 @@
     [self.view addSubview:context.upperlabel.third.second];
     [self.view addSubview:context.upperlabel.third.third];
     //set second and third
-    context.upperlabel.third.second.frame = CGRectMake(30, 205, 175, 125);
-    context.upperlabel.third.third.frame = CGRectMake(30, 50, 175, 125);
+    context.upperlabel.third.second.frame = CGRectMake(30, 305, 175, 125);
+    context.upperlabel.third.third.frame = CGRectMake(30, 150, 175, 125);
     context.upperlabel.third.second.backgroundColor = [UIColor lightGrayColor];
     context.upperlabel.third.third.backgroundColor = [UIColor lightGrayColor];
     context.upperlabel.third.second.hidden = YES;
@@ -146,19 +156,27 @@
     context.answerlabel.first.font = [UIFont systemFontOfSize:60];
     context.answerlabel.first.textAlignment  = NSTextAlignmentCenter;
     //context.answerlabel.first.backgroundColor = [UIColor lightGrayColor];
-    context.answerlabel.first.hidden = YES;
+    //context.answerlabel.first.hidden = YES;
     
     //context.answerlabel.second has answer fraction
-    
+    context.answerlabel.second = [[COINSFracLabel alloc] init];
     context.answerlabel.second.first = [[COINSFracLabel alloc] init];
     context.answerlabel.second.second = [[COINSFracLabel alloc] init];
     context.answerlabel.second.third = [[COINSFracLabel alloc] init];
     //context.answerlabel.second.frame = CGRectMake(130, 400, 420, 300);
-    context.answerlabel.second.first.frame = CGRectMake(130, 400, 420, 150);
+    context.answerlabel.second.first.frame = CGRectMake(200, 500, 300, 150);
+    context.answerlabel.second.first.backgroundColor = [UIColor lightGrayColor];
+    context.answerlabel.second.second.frame = CGRectMake(200, 425, 300, 150);
+    context.answerlabel.second.second.backgroundColor = [UIColor lightGrayColor];
+    context.answerlabel.second.third.frame = CGRectMake(200, 594, 300, 150);
+    context.answerlabel.second.third.backgroundColor = [UIColor lightGrayColor];
+    //context.answerlabel.second.second.frame = CGRectMake(130, 400, 300, 150);
     context.answerlabel.second.first.adjustsFontSizeToFitWidth = YES;
     context.answerlabel.second.second.adjustsFontSizeToFitWidth = YES;
     context.answerlabel.second.third.adjustsFontSizeToFitWidth = YES;
-
+    context.answerlabel.second.first.hidden = YES;
+    //context.answerlabel.second.second.hidden = YES;
+    //context.answerlabel.second.third.hidden = YES;
     
     answer = [NSMutableString string];
     
@@ -169,6 +187,9 @@
     //context.answerlabel.first.text = answer;
     
     [self.view addSubview:context.answerlabel.first];
+    [self.view addSubview:context.answerlabel.second.first];
+    [self.view addSubview:context.answerlabel.second.second];
+    [self.view addSubview:context.answerlabel.second.third];
 
     tmpString = [@"" mutableCopy];
     i = 0;
