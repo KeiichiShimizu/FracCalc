@@ -20,6 +20,7 @@
 @interface COINSFracContext : NSObject
 
 @property COINSFracState *currentState;
+@property COINSFracLabel *currentLabel;
 @property COINSFraction *left;
 @property NSString *opr;
 @property NSInteger sign;
@@ -33,6 +34,6 @@
 
 -(void)request:(char)inChar;
 
-
+-(void)toInit;
 
 @end

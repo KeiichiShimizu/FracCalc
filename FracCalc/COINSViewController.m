@@ -58,11 +58,14 @@
     
     //create upperlabel
     context.upperlabel = [[COINSFracLabel alloc] init];
+    context.currentLabel = [[COINSFracLabel alloc] init];
+
     
     //first has left operand
     context.upperlabel.first = [[COINSFracLabel alloc] init];
-    context.upperlabel.first.frame = CGRectMake(30, 50, 175, 300);
-    context.upperlabel.first.backgroundColor = [UIColor redColor];
+    //context.upperlabel.first.frame = CGRectMake(30, 50, 175, 300);
+    //context.upperlabel.first.backgroundColor = [UIColor redColor];
+    
     
     //context.upperlabel.first.first is int value or line of fraction
     context.upperlabel.first.first = [[COINSFracLabel alloc] init];
@@ -70,12 +73,22 @@
     context.upperlabel.first.first.backgroundColor = [UIColor lightGrayColor];
 	//[self.view addSubview:context.upperlabel.first];
     [self.view addSubview:context.upperlabel.first.first];
+    context.currentLabel = context.upperlabel.first.first;
     
     //init of denomi and nume label
     context.upperlabel.first.second = [[COINSFracLabel alloc] init];
     context.upperlabel.first.third = [[COINSFracLabel alloc] init];
     [self.view addSubview:context.upperlabel.first.second];
     [self.view addSubview:context.upperlabel.first.third];
+    
+    //set second and third
+    context.upperlabel.first.second.frame = CGRectMake(30, 205, 175, 125);
+    context.upperlabel.first.third.frame = CGRectMake(30, 50, 175, 125);
+    context.upperlabel.first.second.backgroundColor = [UIColor lightGrayColor];
+    context.upperlabel.first.third.backgroundColor = [UIColor lightGrayColor];
+    context.upperlabel.first.second.hidden = YES;
+    context.upperlabel.first.third.hidden = YES;
+
     
     
     //second has operator
@@ -87,9 +100,29 @@
     
     //third has right operand
     context.upperlabel.third = [[COINSFracLabel alloc] init];
-    context.upperlabel.third.frame = CGRectMake(350, 50, 175, 300);
-    context.upperlabel.third.backgroundColor = [UIColor redColor];
-    [self.view addSubview:context.upperlabel.third];
+    //context.upperlabel.third.frame = CGRectMake(350, 50, 175, 300);
+    //context.upperlabel.third.backgroundColor = [UIColor redColor];
+ //   [self.view addSubview:context.upperlabel.third];
+    //context.upperlabel.third.first is int value or line of fraction
+    context.upperlabel.third.first = [[COINSFracLabel alloc] init];
+    context.upperlabel.third.first.frame = CGRectMake(350, 125, 175, 125);
+    context.upperlabel.third.first.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:context.upperlabel.third.first];
+    
+    //init of denomi and nume label
+    context.upperlabel.third.second = [[COINSFracLabel alloc] init];
+    context.upperlabel.third.third = [[COINSFracLabel alloc] init];
+    [self.view addSubview:context.upperlabel.third.second];
+    [self.view addSubview:context.upperlabel.third.third];
+    //set second and third
+    context.upperlabel.third.second.frame = CGRectMake(30, 205, 175, 125);
+    context.upperlabel.third.third.frame = CGRectMake(30, 50, 175, 125);
+    context.upperlabel.third.second.backgroundColor = [UIColor lightGrayColor];
+    context.upperlabel.third.third.backgroundColor = [UIColor lightGrayColor];
+    context.upperlabel.third.second.hidden = YES;
+    context.upperlabel.third.third.hidden = YES;
+
+
     
     
     upper = [NSMutableString string];
@@ -102,15 +135,22 @@
     
     context.answerlabel.frame = CGRectMake(30, 400, 550, 300);
     
-    context.answerlabel.backgroundColor = [UIColor blueColor];
+    context.answerlabel.first.backgroundColor = [UIColor blueColor];
+    
+    context.answerlabel.first = [[COINSFracLabel alloc] init];
+    context.answerlabel.first.frame = CGRectMake(30, 450, 175, 100);
+    context.answerlabel.first.text = @"=";
+    //context.answerlabel.hidden = YES;
     
     answer = [NSMutableString string];
+    
+    
     
     [answer appendFormat:@" "];
     
     context.answerlabel.first.text = answer;
     
-    [self.view addSubview:context.answerlabel];
+    [self.view addSubview:context.answerlabel.first];
 
     tmpString = [@"" mutableCopy];
     i = 0;

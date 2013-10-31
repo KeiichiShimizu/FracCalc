@@ -26,14 +26,20 @@
 {
     self = [super init];
     if(self){
-        
+        return self;
+    }else{
+        return nil;
     }
 }
 
--(id)update:(char) c{
-    if (c == '+' | c == '-' | c == '*' | c == '/') {
-        
-    }
+-(void)update:(char) c{
+        NSLog(@"hoge");
+        NSMutableString *tmp = [self.text mutableCopy];
+        [tmp appendFormat:@"%c", c];
+        self.text = tmp;
+        if (c == '+' | c == '-' | c == '*' | c == '/') {
+        }
+    
 }
 
 -(void)setFraction{

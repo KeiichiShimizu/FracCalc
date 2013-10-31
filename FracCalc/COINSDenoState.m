@@ -42,21 +42,14 @@
         }else if (c == '0' | c == '1' | c == '2' | c == '3' | c == '4' |c == '5'| c == '6' | c == '7' | c == '8' | c == '9'){
             
             [self.value appendFormat:@"%c",c];
-            context.isNull = FALSE;
-            //return self;
-            if (context.left == NULL) {
-                return self;
-            }else{
-                NSInteger val = [self.value integerValue];
-                COINSFraction *right = [COINSFraction alloc];
-                right = [right initWith:1 numerator:val denominator:1];
-                context.left = [context.left add:right];
-                context.answerlabel.text = [NSString stringWithFormat:@"%@", [context.left stringRepresentation]];
-                COINSPostCalcState *next = [COINSPostCalcState alloc];
-                return [next initWith];
+            [context.currentLabel update:c];
+            if(c != '0') {
+                context.isNull = FALSE;
             }
+            return self;
+
         }else{
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"入力ミスです" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"誤った入力です" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
             [alert show];
             return self;
         }
@@ -65,9 +58,9 @@
         
     
         if (c == 'a') {
-        
             context.tmpString = [@"" mutableCopy];
             context.upperlabel = [[COINSFracLabel alloc] init];
+            context.upperlabel.first.first.hidden = YES;
             context.answerlabel = [[COINSFracLabel alloc] init];
             COINSDenoState *next = [COINSDenoState alloc];
             return [next initWith];
@@ -77,17 +70,14 @@
             context.isNull = true;
             NSInteger denomi = [self.value integerValue];
 
-        
+            context.upperlabel.first.second.hidden = NO;
+            context.upperlabel.first.third.hidden = NO;
+            
             //context.upperlabel.first.first seen as line of fraction
             context.upperlabel.first.first.frame = CGRectMake(30, 190, 175, 5);
             context.upperlabel.first.first.backgroundColor = [UIColor blackColor];
             context.upperlabel.first.first.text = @"";
         
-            //set second and third
-            context.upperlabel.first.second.frame = CGRectMake(30, 205, 175, 125);
-            context.upperlabel.first.third.frame = CGRectMake(30, 50, 175, 125);
-            context.upperlabel.first.second.backgroundColor = [UIColor lightGrayColor];
-            context.upperlabel.first.third.backgroundColor = [UIColor lightGrayColor];
 
             context.upperlabel.first.second.text = [[NSString stringWithFormat:@"%d", denomi]mutableCopy];
             COINSNumeState *next = [COINSNumeState alloc];
@@ -125,7 +115,7 @@
             return self;
         }else if (c == '='){
             if (context.left == NULL) {
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"入力ミスです" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"誤った入力です" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
                 [alert show];
                 return self;
             }else{
@@ -138,7 +128,7 @@
                 return [next initWith];
             }
         }else{
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"入力ミスです" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"誤った入力です" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
             [alert show];
             return self;
         }

@@ -34,9 +34,11 @@
 -(id)handle:(COINSFracContext *)context inchar:(char)c
 {
     if (c == 'a') {
-        
+        [context toInit];
         context.tmpString = [@"" mutableCopy];
         context.upperlabel.text = [@"" mutableCopy];
+        context.upperlabel.first.second.hidden = YES;
+        context.upperlabel.first.third.hidden = YES;
         context.answerlabel.text = [@"" mutableCopy];
         COINSDenoState *next = [COINSDenoState alloc];
         return [next initWith];

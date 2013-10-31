@@ -216,6 +216,11 @@
 				CLASSPREFIX = COINS;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "COINS Project AID";
+				TargetAttributes = {
+					43D5318C17E42A93001F51DC = {
+						DevelopmentTeam = RM3N4N4RRF;
+					};
+				};
 			};
 			buildConfigurationList = 43D5318817E42A93001F51DC /* Build configuration list for PBXProject "FracCalc" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -361,11 +366,14 @@
 		43D531B417E42A93001F51DC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FracCalc/FracCalc-Prefix.pch";
 				INFOPLIST_FILE = "FracCalc/FracCalc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -373,11 +381,14 @@
 		43D531B517E42A93001F51DC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FracCalc/FracCalc-Prefix.pch";
 				INFOPLIST_FILE = "FracCalc/FracCalc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

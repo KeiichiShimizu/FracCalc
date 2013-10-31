@@ -17,8 +17,7 @@
 @property COINSFracLabel *third;
 @property COINSFraction *fraction;
 
-
--(id)update:(char) c;
+-(void)update:(char) c;
 
 
 
