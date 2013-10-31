@@ -96,6 +96,9 @@
     context.upperlabel.second.frame = CGRectMake(215, 65, 125, 250);
     context.upperlabel.second.backgroundColor = [UIColor blueColor];
 	[self.view addSubview:context.upperlabel.second];
+    context.upperlabel.second.font = [UIFont systemFontOfSize:60];
+    context.upperlabel.second.textAlignment = NSTextAlignmentCenter;
+
 
     
     //third has right operand
@@ -135,12 +138,27 @@
     
     context.answerlabel.frame = CGRectMake(30, 400, 550, 300);
     
-    context.answerlabel.first.backgroundColor = [UIColor blueColor];
+
     
     context.answerlabel.first = [[COINSFracLabel alloc] init];
-    context.answerlabel.first.frame = CGRectMake(30, 450, 175, 100);
+    context.answerlabel.first.frame = CGRectMake(30, 500, 175, 100);
     context.answerlabel.first.text = @"=";
-    //context.answerlabel.hidden = YES;
+    context.answerlabel.first.font = [UIFont systemFontOfSize:60];
+    context.answerlabel.first.textAlignment  = NSTextAlignmentCenter;
+    //context.answerlabel.first.backgroundColor = [UIColor lightGrayColor];
+    context.answerlabel.first.hidden = YES;
+    
+    //context.answerlabel.second has answer fraction
+    
+    context.answerlabel.second.first = [[COINSFracLabel alloc] init];
+    context.answerlabel.second.second = [[COINSFracLabel alloc] init];
+    context.answerlabel.second.third = [[COINSFracLabel alloc] init];
+    //context.answerlabel.second.frame = CGRectMake(130, 400, 420, 300);
+    context.answerlabel.second.first.frame = CGRectMake(130, 400, 420, 150);
+    context.answerlabel.second.first.adjustsFontSizeToFitWidth = YES;
+    context.answerlabel.second.second.adjustsFontSizeToFitWidth = YES;
+    context.answerlabel.second.third.adjustsFontSizeToFitWidth = YES;
+
     
     answer = [NSMutableString string];
     
@@ -148,7 +166,7 @@
     
     [answer appendFormat:@" "];
     
-    context.answerlabel.first.text = answer;
+    //context.answerlabel.first.text = answer;
     
     [self.view addSubview:context.answerlabel.first];
 
