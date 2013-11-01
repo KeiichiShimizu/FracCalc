@@ -56,7 +56,7 @@
 
 -(id)clearOne:(COINSFracContext *)context
 {
-    
+	return nil; // 空のオブジェクトを返します。編集するとき消してね。
 }
 
 @end
