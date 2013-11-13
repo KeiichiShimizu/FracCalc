@@ -42,6 +42,7 @@
         }else if (c == '0' | c == '1' | c == '2' | c == '3' | c == '4' |c == '5'| c == '6' | c == '7' | c == '8' | c == '9'){
             
             [self.value appendFormat:@"%c",c];
+            NSLog(@"%@",self.value);
             [context.currentLabel update:c];
             if(c != '0') {
                 context.isNull = FALSE;
@@ -58,17 +59,21 @@
         
     
         if (c == 'a') {
+            [context toInit];
+            context.currentLabel = context.upperlabel.first.first;
+            return context.currentState;
+            /*
             context.tmpString = [@"" mutableCopy];
             context.upperlabel = [[COINSFracLabel alloc] init];
             context.upperlabel.first.first.hidden = YES;
             context.answerlabel = [[COINSFracLabel alloc] init];
             COINSDenoState *next = [COINSDenoState alloc];
-            return [next initWith];
+            return [next initWith];*/
         
         }else if(c == 'b'){
         
             context.isNull = true;
-            NSInteger denomi = [self.value integerValue];
+            NSInteger denomi = [context.currentLabel.text integerValue];
 
             context.upperlabel.first.second.hidden = NO;
             context.upperlabel.first.third.hidden = NO;
@@ -79,7 +84,7 @@
             context.upperlabel.first.first.text = @"";
         
 
-            context.upperlabel.first.second.text = [[NSString stringWithFormat:@"%d", denomi]mutableCopy];
+            context.upperlabel.first.second.text = [NSString stringWithFormat:@"%d", denomi];
             COINSNumeState *next = [COINSNumeState alloc];
             return [next initWith:denomi];
         
@@ -112,6 +117,8 @@
         }else if (c == '0' | c == '1' | c == '2' | c == '3' | c == '4' |c == '5'| c == '6' | c == '7' | c == '8' | c == '9'){
         
             [self.value appendFormat:@"%c",c];
+            NSLog(@"%@",self.value);
+            [context.currentLabel update:c];
             return self;
         }else if (c == '='){
             if (context.left == NULL) {

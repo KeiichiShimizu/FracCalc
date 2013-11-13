@@ -37,9 +37,6 @@
         NSMutableString *tmp = [self.text mutableCopy];
         [tmp appendFormat:@"%c", c];
         self.text = tmp;
-        if (c == '+' | c == '-' | c == '*' | c == '/') {
-        }
-    
 }
 
 -(void)setFraction{

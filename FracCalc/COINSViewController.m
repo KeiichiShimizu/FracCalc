@@ -66,6 +66,8 @@
     titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:titleLabel];
     
+
+    
     //create upperlabel
     context.upperlabel = [[COINSFracLabel alloc] init];
     context.currentLabel = [[COINSFracLabel alloc] init];
@@ -81,9 +83,10 @@
     context.upperlabel.first.first = [[COINSFracLabel alloc] init];
     context.upperlabel.first.first.frame = CGRectMake(30, 225, 175, 125);
     context.upperlabel.first.first.backgroundColor = [UIColor lightGrayColor];
+    context.upperlabel.first.first.text = @"";
 	//[self.view addSubview:context.upperlabel.first];
     [self.view addSubview:context.upperlabel.first.first];
-    context.currentLabel = context.upperlabel.first.first;
+
     
     //init of denomi and nume label
     context.upperlabel.first.second = [[COINSFracLabel alloc] init];
@@ -135,7 +138,6 @@
     context.upperlabel.third.second.hidden = YES;
     context.upperlabel.third.third.hidden = YES;
 
-
     
     
     upper = [NSMutableString string];
@@ -151,7 +153,7 @@
 
     
     context.answerlabel.first = [[COINSFracLabel alloc] init];
-    context.answerlabel.first.frame = CGRectMake(30, 500, 175, 100);
+    context.answerlabel.first.frame = CGRectMake(30, 530, 175, 100);
     context.answerlabel.first.text = @"=";
     context.answerlabel.first.font = [UIFont systemFontOfSize:60];
     context.answerlabel.first.textAlignment  = NSTextAlignmentCenter;
@@ -164,7 +166,7 @@
     context.answerlabel.second.second = [[COINSFracLabel alloc] init];
     context.answerlabel.second.third = [[COINSFracLabel alloc] init];
     //context.answerlabel.second.frame = CGRectMake(130, 400, 420, 300);
-    context.answerlabel.second.first.frame = CGRectMake(200, 500, 300, 150);
+    context.answerlabel.second.first.frame = CGRectMake(200, 510, 300, 150);
     context.answerlabel.second.first.backgroundColor = [UIColor lightGrayColor];
     context.answerlabel.second.second.frame = CGRectMake(200, 425, 300, 150);
     context.answerlabel.second.second.backgroundColor = [UIColor lightGrayColor];
@@ -174,9 +176,9 @@
     context.answerlabel.second.first.adjustsFontSizeToFitWidth = YES;
     context.answerlabel.second.second.adjustsFontSizeToFitWidth = YES;
     context.answerlabel.second.third.adjustsFontSizeToFitWidth = YES;
-    context.answerlabel.second.first.hidden = YES;
-    //context.answerlabel.second.second.hidden = YES;
-    //context.answerlabel.second.third.hidden = YES;
+    //context.answerlabel.second.first.hidden = YES;
+    context.answerlabel.second.second.hidden = YES;
+    context.answerlabel.second.third.hidden = YES;
     
     answer = [NSMutableString string];
     
@@ -190,6 +192,8 @@
     [self.view addSubview:context.answerlabel.second.first];
     [self.view addSubview:context.answerlabel.second.second];
     [self.view addSubview:context.answerlabel.second.third];
+    context.currentLabel = context.upperlabel.first;
+    [context toInit];
 
     tmpString = [@"" mutableCopy];
     i = 0;

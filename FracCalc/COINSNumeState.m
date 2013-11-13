@@ -40,9 +40,8 @@
         context.upperlabel.first.second.hidden = YES;
         context.upperlabel.first.third.hidden = YES;
         context.answerlabel.text = [@"" mutableCopy];
-        COINSDenoState *next = [COINSDenoState alloc];
-        return [next initWith];
-
+        context.currentLabel = context.upperlabel.first.first;
+        return context.currentState;
     }else if (c == 'c'){
         
         [context.tmpString deleteCharactersInRange:NSMakeRange(self.numeCounter,1)];

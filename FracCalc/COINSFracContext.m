@@ -69,6 +69,18 @@
     self.upperlabel.third.second.hidden = YES;
     self.upperlabel.third.third.hidden = YES;
     
+    
+    self.tmpString = [@"" mutableCopy];
+    self.upperlabel.first.first.text = @"";
+    self.upperlabel.first.second.text = @"";
+    self.upperlabel.first.third.text = @"";
+    self.upperlabel.second.text = @"";
+    self.upperlabel.third.first.text = @"";
+    self.upperlabel.third.second.text = @"";
+    self.upperlabel.third.third.text = @"";
+    self.upperlabel.first.second.hidden = YES;
+    self.upperlabel.first.third.hidden = YES;
+    self.answerlabel.text = @"";
 
     
     //init of currentLabel, first.first
