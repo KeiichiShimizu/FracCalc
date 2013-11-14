@@ -17,6 +17,7 @@
 
 @class COINSFracState;
 
+
 @interface COINSFracContext : NSObject
 
 @property COINSFracState *currentState;
