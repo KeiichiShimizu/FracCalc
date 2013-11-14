@@ -128,7 +128,7 @@
 
 -(id)clearOne:(COINSFracContext *)context
 {
-    
+	return nil;
 }
 
 
