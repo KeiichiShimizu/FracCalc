@@ -30,6 +30,7 @@
 @property COINSFracLabel *answerlabel;
 @property NSInteger counter;
 @property BOOL isNull;
+@property BOOL isLeft;
 
 -(id)initWith;
 

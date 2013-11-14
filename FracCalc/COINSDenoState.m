@@ -86,6 +86,12 @@
 
             context.upperlabel.first.second.text = [NSString stringWithFormat:@"%d", denomi];
             COINSNumeState *next = [COINSNumeState alloc];
+            if (context.isLeft) {
+                context.currentLabel = context.upperlabel.first.third;
+            }else{
+                context.currentLabel = context.upperlabel.third.third;
+            }
+            
             return [next initWith:denomi];
         
         }else if (c == 'c'){

@@ -22,7 +22,7 @@
 @synthesize counter;
 @synthesize isNull;
 @synthesize sign;
-
+@synthesize isLeft;
 
 -(void)toInit
 {
@@ -102,6 +102,7 @@
         currentState = [[COINSDenoState alloc] initWith];
         left = [[COINSFraction alloc] init];
         isNull = true;
+        isLeft = true;
         counter = 0;
         sign = 1;
     }
